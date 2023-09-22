@@ -1,0 +1,20 @@
+lowcaselist = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+upcaselist = [x.upper() for x in lowcaselist]
+biglist = []
+password = ""
+biglist.append(upcaselist)
+biglist.append(lowcaselist)
+biglist.append('1', '2', '3', '4', '5', '6', '7', '8', '9', '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '-', '_', '=', '+', '[', ']', '{', '}', ';', '|', ':', '/', '?', '<', '>')
+num = int(input("Enter password length:"))
+
+while(num > 0):
+    
+    num = num - 1 
+    char = random.choice(biglist)
+    password = password + char
+
+
+if(num < 0):
+    print(password)
+    
+
