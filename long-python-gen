@@ -1,0 +1,59 @@
+import random
+
+
+
+
+lowercaselist = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z" ]
+numlist = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+uppercaselist = [x.upper() for x in lowercaselist]
+speclist = ["!", "?", "/", ".", ",", "|","+" "-", "=", "_", "@", "#", "$", "%", "<", ">", "^", "&", "*", "(", ")"]
+#password = []
+printpass = ""
+passlen = input("Enter password length")
+token = int(passlen)
+
+
+
+
+
+
+
+
+
+
+while(token > 0):
+    
+    ran = random.randrange(1,5)
+    if(ran == 1):
+        token = token - 1
+        lowercaseindex = random.choice(lowercaselist)
+      #  print(lowercaseindex)
+        printpass = printpass + lowercaseindex
+    
+        
+    if(ran == 2):
+        token = token - 1 
+        uppercaseindex = random.choice(uppercaselist)
+        printpass = printpass + uppercaseindex
+    
+    if(ran == 3):
+        token = token - 1 
+        numlistindex = random.choice(numlist)
+        printpass = printpass + numlistindex
+        
+        
+    if(ran ==4):
+        token = token - 1 
+        speclistindex = random.choice(speclist)
+        printpass = printpass + speclistindex
+        
+        
+        
+    #else:
+        
+      #  print("ERROR FIX CODED FID CODE JALKFKLDS JALJ FKASL KEAJ LJFDKLSA NOW NOW NOW NOW NOWN ONOW NOWNO NOWNOWNOW")
+      
+      
+     
+if(token <= 0):
+    print(printpass)
